@@ -1,18 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Xml.Serialization;
 
-namespace WpfApplication1
+namespace SettingsXML_lib
 {
-    public class Settings
+    public class SettingsXML
     {
         private SettingsFields _fields = new SettingsFields();
         private readonly string _xmlName;
-        public Settings(string XmlNameX)
+        public SettingsXML(string XmlNameX)
         {
-            //_xmlName = System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("PROGRAM_NAME.exe", "") + XmlNameX;
             _xmlName = XmlNameX;
-
         }
 
         public bool UpdeteIsEnable
@@ -66,4 +67,3 @@ namespace WpfApplication1
     }
 
 }
-

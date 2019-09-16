@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SettingsXML_lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,15 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Test_wpf.Properties;
 
-namespace WpfApplication1
+namespace Test_wpf
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly Settings _settings = new Settings("Settings.xml");
+        readonly SettingsXML _settings = new SettingsXML("Settings.xml");
+
         public MainWindow()
         {
             InitializeComponent();
